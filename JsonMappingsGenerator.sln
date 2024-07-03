@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonMappingsGenerator", "Js
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{000262EE-A991-4059-B013-A3ACB0E4FC7A}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yotic.Linq", "..\Yotic.Linq\Yotic.Linq\Yotic.Linq.csproj", "{F3BE9119-F951-458C-8C18-0A4CE8C002E6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,9 +25,20 @@ Global
 		{CB7FA0E8-D43B-446D-854B-7F0AF451EAC0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CB7FA0E8-D43B-446D-854B-7F0AF451EAC0}.Release|x64.ActiveCfg = Release|Any CPU
 		{CB7FA0E8-D43B-446D-854B-7F0AF451EAC0}.Release|x64.Build.0 = Release|Any CPU
+		{F3BE9119-F951-458C-8C18-0A4CE8C002E6}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{F3BE9119-F951-458C-8C18-0A4CE8C002E6}.Debug|Any CPU.Build.0 = Debug|x64
+		{F3BE9119-F951-458C-8C18-0A4CE8C002E6}.Debug|x64.ActiveCfg = Debug|x64
+		{F3BE9119-F951-458C-8C18-0A4CE8C002E6}.Debug|x64.Build.0 = Debug|x64
+		{F3BE9119-F951-458C-8C18-0A4CE8C002E6}.Release|Any CPU.ActiveCfg = Release|x64
+		{F3BE9119-F951-458C-8C18-0A4CE8C002E6}.Release|Any CPU.Build.0 = Release|x64
+		{F3BE9119-F951-458C-8C18-0A4CE8C002E6}.Release|x64.ActiveCfg = Release|x64
+		{F3BE9119-F951-458C-8C18-0A4CE8C002E6}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F3BE9119-F951-458C-8C18-0A4CE8C002E6} = {000262EE-A991-4059-B013-A3ACB0E4FC7A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0C63C12E-E921-4855-A1F2-2451AEF28AB5}
