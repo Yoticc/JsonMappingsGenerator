@@ -15,4 +15,8 @@
     <ProjectReference Include="..\..\Yotic.Linq\Yotic.Linq\Yotic.Linq.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Using Include="Yotic" />
+  </ItemGroup>
+
 </Project>

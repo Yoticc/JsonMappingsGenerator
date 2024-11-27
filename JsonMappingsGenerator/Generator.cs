@@ -1,7 +1,9 @@
 ﻿using Newtonsoft.Json.Linq;
+using System.Reflection;
 class Generator
 {
     public string JsonPropertyClassName = "JsonProperty";
+    public bool AppendWatermark = true;
 
     public string Generate(string input)
     {
@@ -25,7 +27,7 @@ class Generator
 
         if (token is JProperty propToken)
         {
-            resultClass.Name = GetUpperName(propToken.Name) + "Data";
+            resultClass.Name = GetNoSnakeCaseName(GetUpperName(propToken.Name)) + "Data";
             token = propToken.Value;
         }
 
@@ -48,7 +50,7 @@ class Generator
             if (name.Contains('/'))
                 return;
 
-            var upperName = GetUpperName(name);
+            var upperName = GetNoSnakeCaseName(GetUpperName(name));
 
             var field = type switch
             {
@@ -75,6 +77,19 @@ class Generator
     }
 
     string GetUpperName(string name) => new string(name.ToCharArray().ex(a => { a[0] = char.ToUpper(a[0]); return a; }));
+    string GetNoSnakeCaseName(string name)
+    {
+        var result = "";
+        var parts = name.Split('_');
+        foreach (var part in parts)
+        {
+            if (part == "")
+                result += '_';
+            else result += GetUpperName(part);
+        }
+
+        return result;
+    }
 
     static readonly Dictionary<JTokenType, string> TokenTypeToType = new()
     {

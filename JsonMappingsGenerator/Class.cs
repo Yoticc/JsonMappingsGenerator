@@ -57,7 +57,7 @@
             for (var i = 0; i < Fields.Count; i++)
             {
                 var field = Fields[i];
-                lines.Add($"    [Prop(\"{field.JsonName}\")] {field.Type} {field.Name}{((i + 1) != Fields.Count ? "," : "")}");
+                lines.Add($"    [{generator.JsonPropertyClassName}(\"{field.JsonName}\")] {field.Type} {field.Name}{((i + 1) != Fields.Count ? "," : "")}");
             }
         }
 
