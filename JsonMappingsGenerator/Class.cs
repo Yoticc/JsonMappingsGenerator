@@ -44,10 +44,9 @@
     {
         List<string> lines = [];
             
-        var prefix = IsNested ? "public " : "";
         var sufix = HasMembers ? "(" : ";";
 
-        lines.Add($"pubic {prefix}record {Name??"TOPNAME"}{sufix}");
+        lines.Add($"public record {Name??"TOPNAME"}{sufix}");
 
         if (!HasMembers)
             return lines;
